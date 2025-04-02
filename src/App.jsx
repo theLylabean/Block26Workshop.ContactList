@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <div>
-        
+        <ContactList />
       </div>
     </>
   )
