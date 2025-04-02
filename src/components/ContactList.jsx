@@ -24,19 +24,19 @@ console.log('contacts: ', contacts);
             </thead>
             <tbody>
                 <tr>
-                    <td>
+                    <th>
                         Name
-                    </td>
-                    <td>
+                    </th>
+                    <th>
                         Email
-                    </td>
-                    <td>
+                    </th>
+                    <th>
                         Phone
-                    </td>
+                    </th>
                 </tr>
                 {
                     contacts.map((contact) => {
-                        return <ContactRow key={contact.id} contac={contact} />;
+                        return <ContactRow key={contact.id} contact={contact} />;
                     })
                 }
             </tbody>
