@@ -9,20 +9,20 @@ console.log('contacts: ', contacts);
         <table>
             <thead>
                 <tr>
-                    <th colSpan='3'>
-                        Contact List
+                    <th className='header' colSpan='3'>
+                        <u>Contact List</u>
                     </th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <th>
+                    <th id='secondHeader'>
                         Name
                     </th>
-                    <th>
+                    <th id='secondHeader'>
                         Email
                     </th>
-                    <th>
+                    <th id='secondHeader'>
                         Phone
                     </th>
                 </tr>

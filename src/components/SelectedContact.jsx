@@ -14,16 +14,39 @@ function SelectedContact ({ selectedContact, setSelectedContact }){
     return (
         <div>
         <h1>
-          <strong>Current Selected Contact</strong>
+            <strong style={{
+                textDecoration: 'underline',
+            }}>
+                Current Selected Contact
+            </strong>
         </h1>
-        <p><strong>Name:</strong> {selectedContact.name}</p>
-          <p><strong>Email:</strong> {selectedContact.email}</p>
-          <p><strong>Phone:</strong> {selectedContact.phone}</p>
-          <button 
+            <p>
+                <strong>Name:</strong> {selectedContact.name}
+            </p>
+            <p>
+                <strong>Email:</strong>{' '} 
+                <span onClick={() => {
+                    console.log('Clicked the email address');
+                }}
+                
+                     style={{
+                        cursor: 'pointer',
+                        textDecoration: 'underline',
+                }}
+                >
+                    {selectedContact.email}
+                </span>
+            </p>
+            <p>
+                <strong>Phone:</strong> {selectedContact.phone}
+            </p>
+            <button style={{
+                cursor: 'pointer'
+            }}
             onClick={() => setSelectedContact(null)}>
               Back to Contact List
-          </button>
-      </div>
+            </button>
+        </div>
     )
 }
 
