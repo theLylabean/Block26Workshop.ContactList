@@ -64,3 +64,19 @@ button {
     height: 50px;
     width: 150px;
 }
+
+.hover-image {
+    display: none;
+    position: absolute;
+    top: 0;                     /* Align vertically with the name */
+    left: calc(100% + 200px);    /* 100% of the container's width + 20px spacing */
+    width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+      }
+  
+.name-hover-trigger:hover .hover-image {
+    display: block;
+}

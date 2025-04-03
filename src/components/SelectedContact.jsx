@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import HoverImage from "./HoverImage.jsx";
 
 function SelectedContact ({ selectedContact, setSelectedContact }){
     useEffect(() => {
@@ -12,41 +13,57 @@ function SelectedContact ({ selectedContact, setSelectedContact }){
       }, []);
 
     return (
-        <div>
-        <h1>
-            <strong style={{
-                textDecoration: 'underline',
-            }}>
-                Current Selected Contact
-            </strong>
-        </h1>
-            <p>
-                <strong>Name:</strong> {selectedContact.name}
-            </p>
-            <p>
-                <strong>Email:</strong>{' '} 
-                <span onClick={() => {
-                    console.log('Clicked the email address');
-                }}
-                
-                     style={{
-                        cursor: 'pointer',
-                        textDecoration: 'underline',
-                }}
-                >
-                    {selectedContact.email}
-                </span>
-            </p>
-            <p>
-                <strong>Phone:</strong> {selectedContact.phone}
-            </p>
-            <button style={{
-                cursor: 'pointer'
-            }}
-            onClick={() => setSelectedContact(null)}>
-              Back to Contact List
-            </button>
-        </div>
+    <div className="name-hover-wrapper" style={{ position: 'relative' }}>
+    <h1>
+        <strong style={{ textDecoration: 'underline' }}>
+            Current Selected Contact
+        </strong>
+    </h1>
+
+    <p style={{ margin: 0 }}>
+        <strong>Name:</strong>{' '}
+        <span
+        className="name-hover-trigger"
+        style={{
+            cursor: 'pointer',
+            position: 'relative',
+            display: 'inline-block',
+        }}
+    >
+        {selectedContact.name}
+        <HoverImage
+            src="https://i.imgur.com/rGzqhiW.jpeg"
+            alt={`Photo of ${selectedContact.name}`}
+        />
+        </span>
+    </p>
+
+    <p style={{ margin: '20px 0' }}>
+    <strong>Email:</strong>{" "}
+        <span
+          onClick={() => {
+            console.log("Clicked the email address");
+          }}
+          style={{
+            cursor: "pointer",
+            textDecoration: "underline",
+          }}
+        >
+          {selectedContact.email}
+        </span>
+    </p>
+
+    <p style={{ margin: '20px 0' }}>
+        <strong>Phone:</strong> {selectedContact.phone}
+    </p>
+
+    <button
+        style={{ cursor: 'pointer', marginTop: '8px' }}
+        onClick={() => setSelectedContact(null)}
+    >
+        Back to Contact List
+    </button>
+    </div>
     )
 }
 
