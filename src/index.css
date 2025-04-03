@@ -1,0 +1,66 @@
+body {
+    font-family: 'Century Gothic', sans-serif;
+    background-color: lightcoral;
+}
+
+table {
+    border: 1px solid #000;
+    border-collapse: collapse;
+    align-items: center;
+}
+
+.header {
+    padding-bottom: 25px;
+}
+
+#secondHeader {
+    border-bottom: 1px solid #000;
+}
+
+table td {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    width: 250px;
+}
+
+table td:first-child {
+    border-left: none;
+}
+
+table td:last-child {
+    border-right: none;
+}
+
+.name {
+    text-align: left;
+    padding-left: 5px;
+}
+
+.email {
+    text-align: center;
+}
+
+.phone {
+    text-align: right;
+    padding-right: 5px;
+}
+
+.highlight {
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.highlight:hover {
+    background-color: white;
+}
+
+button {
+    border: none;
+    border-radius: 13px;
+    background-color: navy;
+    color: white;
+    height: 50px;
+    width: 150px;
+}
