@@ -23,7 +23,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div id='contactsContainer'>
         {
           selectedContact
           ? <SelectedContact id='singleContact'

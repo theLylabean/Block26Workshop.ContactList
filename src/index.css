@@ -3,6 +3,11 @@ body {
     background-color: lightcoral;
 }
 
+#contactsContainer {
+    display: flex;
+    justify-content: center;
+}
+
 table {
     border: 1px solid #000;
     border-collapse: collapse;
