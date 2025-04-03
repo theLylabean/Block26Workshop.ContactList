@@ -1,7 +1,6 @@
-import { useState } from "react";
 import ContactRow from "./ContactRow.jsx";
 
-function ContactList ({ contacts, setContacts }){
+function ContactList ({ contacts, setContacts, selectedContact, setSelectedContact, setContact }){
 
 console.log('contacts: ', contacts);
 
@@ -29,7 +28,7 @@ console.log('contacts: ', contacts);
                 </tr>
                 {
                     contacts.map((contact) => {
-                        return <ContactRow key={contact.id} contact={contact} setContacts={setContacts} />;
+                        return <ContactRow key={contact.id} contact={contact} setContacts={setContacts} selectedContact={selectedContact} setSelectedContact={setSelectedContact} setContact={setContact} />;
                     })
                 }
             </tbody>
